@@ -34,7 +34,6 @@ const darkTheme = createTheme({
     mode: 'dark',
     background: {
       default: '#121212',
-      paper: '#fff',
     },
     envelope: {
       frontFlap: '#dbb95a',
@@ -60,7 +59,6 @@ const lightTheme = createTheme({
     },
     background: {
       default: '#89CFF0',
-      paper: '#fff',
     },
   },
   typography: {

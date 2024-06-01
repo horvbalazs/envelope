@@ -108,11 +108,12 @@ export default function Envelope({ title, message, onOpen }: IOwnProps) {
         width: '50%',
         maxHeight: '50%',
         aspectRatio: '1.6 / 1',
-        borderRadius: theme.spacing(1),
-        boxShadow: `1px 1px 4px 4px ${theme.palette.divider}`,
+        borderBottomLeftRadius: theme.spacing(1),
+        borderBottomRightRadius: theme.spacing(1),
+        boxShadow: `0px 1px 2px 0px ${theme.palette.common.black}`,
         '&:hover:not(.opened)': {
           cursor: 'pointer',
-          boxShadow: `1px 1px 6px 6px ${theme.palette.divider}`,
+          boxShadow: `0px 1px 4px 0px ${theme.palette.common.black}`,
         },
       }}
       style={{
@@ -152,7 +153,13 @@ export default function Envelope({ title, message, onOpen }: IOwnProps) {
             borderBottomRightRadius: theme.spacing(1),
           }}
         >
-          <Typography sx={{ fontSize: '1.5vw', wordWrap: 'break-word' }}>
+          <Typography
+            sx={{
+              fontSize: '1.5vw',
+              wordWrap: 'break-word',
+              color: theme.palette.common.black,
+            }}
+          >
             {title}
           </Typography>
         </Box>
@@ -163,10 +170,10 @@ export default function Envelope({ title, message, onOpen }: IOwnProps) {
           position: 'absolute',
           width: `calc(100% - ${theme.spacing(6)})`,
           height: `calc(100% - ${theme.spacing(4)})`,
-          backgroundColor: theme.palette.background.paper,
+          backgroundColor: theme.palette.common.white,
           left: theme.spacing(3),
           padding: theme.spacing(1),
-          boxShadow: `1px 1px 4px 4px ${theme.palette.divider}`,
+          boxShadow: `0px 1px 2px 0px ${theme.palette.common.black}`,
           zIndex: 2,
           overflow: 'hidden',
           textAlign: 'center',
@@ -174,7 +181,13 @@ export default function Envelope({ title, message, onOpen }: IOwnProps) {
           ...letterSprings,
         }}
       >
-        <Typography sx={{ fontSize: '1vw', wordWrap: 'break-word' }}>
+        <Typography
+          sx={{
+            fontSize: '1vw',
+            wordWrap: 'break-word',
+            color: theme.palette.common.black,
+          }}
+        >
           {message}
         </Typography>
       </Box>
